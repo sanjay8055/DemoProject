@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  zipID
+
+  Created by Damien Hill on 13/09/13.
+  Copyright (c) 2013 zipID. All rights reserved.
+*/
+
+"SIGNIN_INVALID_EMAIL_TITLE" = "Invalid email address";
+"SIGNIN_INVALID_EMAIL_MESSAGE" = "Please enter a valid email address.";
+"SIGNIN_INVALID_EMAIL_BUTTON" = "Ok";
+
+"SIGNIN_INVALID_PASSWORD_TITLE" = "Invalid password";
+"SIGNIN_INVALID_PASSWORD_MESSAGE" = "Please enter your password.";
+"SIGNIN_INVALID_PASSWORD_BUTTON" = "Ok";
+
+"AUTHENTICATION_FAILED_TITLE" = "Authentication failed";
+"AUTHENTICATION_FAILED_MESSAGE" = "There was a problem with your email address or password. Please try again.";
+"AUTHENTICATION_FAILED_BUTTON" = "Ok";
+
+"ACCOUNT_CREATION_SUCCESS_TITLE" = "Account created successfully";
+"ACCOUNT_CREATION_SUCCESS_MESSAGE" = "You will receive an email shortly to verify your account.";
+"ACCOUNT_CREATION_SUCCESS_BUTTON" = "Continue";
+
+"REQUIRED_DOCUMENTS_TITLE" = "Required documents";
+"OPTIONAL_DOCUMENTS_TITLE" = "Optional documents";

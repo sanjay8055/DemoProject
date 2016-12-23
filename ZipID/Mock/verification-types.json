@@ -1,0 +1,37 @@
+{
+  "NSW": {
+    "name": "NSW Property Transfer",
+		"userSelectable": true,
+    "questions": ["appFivePointCheck", "APP", "FPV", "FPN", "ADL", "POA", "BTH", "CTZ", "DSC", "MED", "CTL", "VAC", "MRG", "NAM", "PAG", "LTF", "MOR", "CAF", "OTH", "additionalDocuments", "clientPhoto", "clientSignature", "agentSignature", "appPrivacy"]
+  },
+  "QLD": {
+    "name": "QLD Property Transfer",
+		"userSelectable": true,
+    "questions": ["appFivePointCheck", "APP", "FPV", "FPN", "ADL", "POA", "BTH", "CTZ", "DSC", "MED", "CTL", "VAC", "MRG", "NAM", "PAG", "LTF", "MOR", "CAF", "OTH", "additionalDocuments", "clientPhoto", "clientSignature", "agentSignature", "appPrivacy"]
+  },  
+  "SA": {
+    "name": "SA Property Transfer",
+		"userSelectable": true,
+    "questions": ["appFivePointCheck", "APP", "FPV", "FPN", "ADL", "POA", "BTH", "CTZ", "DSC", "MED", "CTL", "VAC", "MRG", "NAM", "PAG", "LTF", "MOR", "CAF", "OTH", "additionalDocuments", "clientPhoto", "clientSignature", "agentSignature", "appPrivacy"]
+  },  
+  "VIC": {
+    "name": "VIC Property Transfer",
+		"userSelectable": true,
+    "questions": ["appFivePointCheck", "APP", "FPV", "FPN", "ADL", "POA", "BTH", "CTZ", "DSC", "MED", "CTL", "VAC", "MRG", "NAM", "PAG", "LTF", "MOR", "CAF", "OTH", "additionalDocuments", "clientPhoto", "clientSignature", "agentSignature", "appPrivacy"]
+  },  
+  "WA": {
+    "name": "WA Property Transfer",
+		"userSelectable": true,
+    "questions": ["appFivePointCheck", "APP", "FPV", "FPN", "ADL", "POA", "BTH", "CTZ", "DSC", "MED", "CTL", "VAC", "RAN", "MRG", "NAM", "ASA", "PAG", "LTF", "MOR", "CAF", "OTH", "additionalDocuments", "clientPhoto", "clientSignature", "agentSignature", "appPrivacy"]
+  },
+	"PEXA": {
+		"name": "PEXA Subscriber",
+		"userSelectable": true,
+		"questions": ["pexaAdditionalInfo", "appSixPointCheckPEXA", "APP", "FPV", "ADL", "POA", "BTH", "CTZ", "DSC", "MED", "CTL", "VAC", "MRG", "NAM", "additionalDocuments", "clientPhoto", "clientSignaturePEXA", "agentSignature", "appPexaPrivacy"]
+	},
+	"TOLL": {
+		"name": "TOLL",
+		"userSelectable": false,
+		"questions": ["tollFivePointCheck", "APP", "FPV", "ADL", "POA", "BTH", "CTZ", "DSC", "MED", "CTL", "VAC", "MRG", "NAM", "additionalDocuments", "clientPhoto", "clientSignature", "tollAgentSignature", "appPrivacy"]
+	}
+}

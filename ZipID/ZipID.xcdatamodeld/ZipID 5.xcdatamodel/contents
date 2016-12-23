@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C1021" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Agent" representedClassName="Agent" syncable="YES">
+        <attribute name="dateUsed" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Job" representedClassName="Job" syncable="YES">
+        <attribute name="agentName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="businessCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateCompleted" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dateStarted" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="jobId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="surveyResponse" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="verificationType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Person" inverseName="job" inverseEntity="Person" syncable="YES"/>
+        <relationship name="survey" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Survey" inverseName="job" inverseEntity="Survey" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES">
+        <attribute name="dateOfBirth" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="middleName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="job" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Job" inverseName="person" inverseEntity="Job" syncable="YES"/>
+    </entity>
+    <entity name="Survey" representedClassName="Survey" syncable="YES">
+        <attribute name="requiredDocumentsString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="surveyDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="verificationType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="job" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Job" inverseName="survey" inverseEntity="Job" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Agent" positionX="0" positionY="126" width="128" height="90"/>
+        <element name="Job" positionX="45" positionY="90" width="128" height="210"/>
+        <element name="Person" positionX="-45" positionY="0" width="128" height="135"/>
+        <element name="Survey" positionX="9" positionY="54" width="128" height="103"/>
+    </elements>
+</model>

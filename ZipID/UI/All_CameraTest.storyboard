@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="my8-Kn-OIP">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera Test View Controller-->
+        <scene sceneID="EjM-Lf-O24">
+            <objects>
+                <viewController id="my8-Kn-OIP" customClass="CameraTestViewController" customModule="ZipID" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dgw-8o-0rr"/>
+                        <viewControllerLayoutGuide type="bottom" id="BjE-Dm-nMY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k2O-tu-n5i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IaU-VD-KLr" customClass="IPDFCameraViewController">
+                                <frame key="frameInset" minY="20" width="600" height="580"/>
+                                <subviews>
+                                    <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysu-xP-Z4n">
+                                        <frame key="frameInset" minX="267" minY="460" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="ITt-Vo-xXX"/>
+                                            <constraint firstAttribute="width" constant="66" id="v2O-tW-TxR"/>
+                                        </constraints>
+                                        <state key="normal" image="capture_button">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="captureButton:" destination="my8-Kn-OIP" eventType="touchUpInside" id="yFN-A1-71B"/>
+                                        </connections>
+                                    </button>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="focusIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="w5c-oG-35A">
+                                        <frame key="frameInset" minX="-65" width="75" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="FII-Nz-IYh"/>
+                                            <constraint firstAttribute="width" constant="75" id="a4r-E8-Fwm"/>
+                                        </constraints>
+                                    </imageView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lxb-Gf-omZ">
+                                        <frame key="frameInset" width="600" height="8"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="8" id="nxm-8e-mIL"/>
+                                        </constraints>
+                                    </progressView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="Lxb-Gf-omZ" firstAttribute="top" secondItem="IaU-VD-KLr" secondAttribute="top" id="JoP-NM-TtT"/>
+                                    <constraint firstAttribute="bottom" secondItem="ysu-xP-Z4n" secondAttribute="bottom" constant="54" id="NyV-N2-AKV"/>
+                                    <constraint firstItem="Lxb-Gf-omZ" firstAttribute="leading" secondItem="IaU-VD-KLr" secondAttribute="leading" id="cZp-rY-lbU"/>
+                                    <constraint firstAttribute="centerX" secondItem="ysu-xP-Z4n" secondAttribute="centerX" id="fzf-ek-qtl"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lxb-Gf-omZ" secondAttribute="trailing" id="stq-s2-9f6"/>
+                                    <constraint firstItem="w5c-oG-35A" firstAttribute="top" secondItem="IaU-VD-KLr" secondAttribute="top" id="wky-tR-Zfk"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nd7-8R-H8K" userLabel="Adjust Bar">
+                                <frame key="frameInset" minY="556" width="600" height="44"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCo-We-vPV">
+                                        <frame key="frameInset" minX="520" width="80" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="V8K-Iq-YEz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Use Photo">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="usePhoto:" destination="my8-Kn-OIP" eventType="touchUpInside" id="wYU-Nb-4ga"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5M-P3-3sD">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="qR7-ZC-mTG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancel:" destination="my8-Kn-OIP" eventType="touchUpInside" id="qjP-2G-bFb"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBl-du-Ryg">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Nlj-r1-yBr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Retake">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="retakeImage:" destination="my8-Kn-OIP" eventType="touchUpInside" id="nnf-Xo-YBz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="KCo-We-vPV" firstAttribute="top" secondItem="nd7-8R-H8K" secondAttribute="top" id="4Pp-dO-OOV"/>
+                                    <constraint firstItem="G5M-P3-3sD" firstAttribute="leading" secondItem="nd7-8R-H8K" secondAttribute="leading" id="CQt-qz-PI4"/>
+                                    <constraint firstAttribute="bottom" secondItem="dBl-du-Ryg" secondAttribute="bottom" id="RkE-Zk-SCw"/>
+                                    <constraint firstItem="dBl-du-Ryg" firstAttribute="top" secondItem="nd7-8R-H8K" secondAttribute="top" id="hWH-yO-cMP"/>
+                                    <constraint firstAttribute="bottom" secondItem="G5M-P3-3sD" secondAttribute="bottom" id="i0y-f7-jnA"/>
+                                    <constraint firstItem="dBl-du-Ryg" firstAttribute="leading" secondItem="nd7-8R-H8K" secondAttribute="leading" id="j7v-et-Xus"/>
+                                    <constraint firstAttribute="bottom" secondItem="KCo-We-vPV" secondAttribute="bottom" id="p5t-JR-nby"/>
+                                    <constraint firstAttribute="height" constant="44" id="tYr-cX-A0k"/>
+                                    <constraint firstAttribute="trailing" secondItem="KCo-We-vPV" secondAttribute="trailing" id="uiE-Kj-j3a"/>
+                                    <constraint firstItem="G5M-P3-3sD" firstAttribute="top" secondItem="nd7-8R-H8K" secondAttribute="top" id="zcE-vX-Kx3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nd7-8R-H8K" secondAttribute="trailing" id="2Sw-mc-35Z"/>
+                            <constraint firstAttribute="trailing" secondItem="IaU-VD-KLr" secondAttribute="trailing" id="2tH-W8-OlG"/>
+                            <constraint firstItem="IaU-VD-KLr" firstAttribute="bottom" secondItem="BjE-Dm-nMY" secondAttribute="top" id="9z8-gz-TCR"/>
+                            <constraint firstItem="BjE-Dm-nMY" firstAttribute="top" secondItem="nd7-8R-H8K" secondAttribute="bottom" id="Dp9-fi-Ye5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nd7-8R-H8K" secondAttribute="trailing" id="ErS-9B-hTf"/>
+                            <constraint firstItem="IaU-VD-KLr" firstAttribute="leading" secondItem="k2O-tu-n5i" secondAttribute="leading" id="HRa-K0-DMd"/>
+                            <constraint firstItem="nd7-8R-H8K" firstAttribute="leading" secondItem="k2O-tu-n5i" secondAttribute="leading" id="jZW-PU-QCk"/>
+                            <constraint firstItem="nd7-8R-H8K" firstAttribute="leading" secondItem="k2O-tu-n5i" secondAttribute="leadingMargin" id="o00-6E-QEJ"/>
+                            <constraint firstItem="IaU-VD-KLr" firstAttribute="top" secondItem="dgw-8o-0rr" secondAttribute="bottom" id="sHV-Wb-asa"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ErS-9B-hTf"/>
+                                <exclude reference="o00-6E-QEJ"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KdR-o8-G0f" appends="YES" id="gRI-gc-Vag"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="adjustBar" destination="nd7-8R-H8K" id="arK-yJ-RH9"/>
+                        <outlet property="cameraViewController" destination="IaU-VD-KLr" id="SyN-l5-ZGv"/>
+                        <outlet property="cancelButton" destination="G5M-P3-3sD" id="5vN-07-mYg"/>
+                        <outlet property="doneButton" destination="KCo-We-vPV" id="MIf-q6-41W"/>
+                        <outlet property="focusIndicator" destination="w5c-oG-35A" id="LOe-SJ-1pR"/>
+                        <outlet property="progressView" destination="Lxb-Gf-omZ" id="cwc-tZ-h81"/>
+                        <outlet property="retakeButton" destination="dBl-du-Ryg" id="jeh-Ty-vqv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GEr-f1-lXg" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KdR-o8-G0f">
+                    <connections>
+                        <action selector="focusGesture:" destination="my8-Kn-OIP" id="jQd-V1-foK"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1165" y="751"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="capture_button" width="66" height="66"/>
+        <image name="focusIndicator" width="75" height="75"/>
+    </resources>
+</document>

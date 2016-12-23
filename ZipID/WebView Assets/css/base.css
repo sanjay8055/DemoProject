@@ -1,0 +1,25 @@
+* {
+  font-family: '-apple-system','HelveticaNeue';
+  color: #565656;
+  font-size: 15px;    
+}
+
+html,
+body {
+    background: #f8f8f8;
+}
+
+.container {
+  padding: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+ul, ol {
+  margin-top: 12px;
+  padding-left: 1.2em;
+}
+
+li {
+  margin-bottom: 12px;
+}

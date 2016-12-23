@@ -1,0 +1,750 @@
+{
+  "tollFivePointCheck":{
+    "name":"Check",
+    "shortName":"Check",
+    "title":"Check",
+    "userSelectable":false,
+    "questions":[
+       {
+       "question":"Before you begin, please check:\n1.  Customer has originals of each document\n2.  Documents appear genuine and original (photocopies not acceptable)\n3.  None of the documents are expired\n4.  Name is consistent across documents or if there is a difference, that the customer has provided with a change of name or marriage certificate showing the name changes.\n5.  Customer appears to be the same person shown in the photo ID documents (eyes, nose, mouth, cheekbones)\nIf any of the above checks fail, you should not proceed as the customer’s verification of identity will not comply.",
+       "type":"text"
+       }
+     ]
+  },
+  "appFivePointCheck":{
+    "name":"Check",
+    "shortName":"Check",
+    "title":"Check",
+    "userSelectable":false,
+    "questions":[
+      {
+        "question":"Before you begin, please check:\n1.  Client has originals of each document\n2.  Documents appear genuine and original (photocopies not acceptable)\n3.  None of the documents are expired\n4.  Name is consistent across documents (and any Marriage or Change of Name Certificate)\n5.  Client appears to be the same person shown in the photo ID documents (eyes, nose, mouth, cheekbones)\nIf any of the above checks fail, your client's verification of identity may not comply with the Registrar's verification of identity standard.",
+        "type":"text"
+      }
+    ]
+  },
+  "additionalDocuments":{
+    "documentType":"additional",
+    "title":"Additional Documents",
+    "userSelectable":false,
+    "shortName":"Additional Documents",
+    "name":"Additional Documents",
+    "questions":[
+      {
+        "question":"Take a photo of any additional documents that may need to be included",
+        "type":"photo"
+      }
+    ]
+  },
+  "appSixPointCheckPEXA":{
+    "name":"Check",
+    "shortName":"Check",
+    "title":"Check",
+    "userSelectable":false,
+    "questions":[
+      {
+        "question":"Before you begin, please check:\n1.  Client has originals of each document\n2.  Documents appear genuine and original (photocopies not acceptable)\n3.  None of the documents are expired\n4.  Name is consistent across documents (and any Marriage or Change of Name Certificate)\n5.  Client appears to be the same person shown in the photo ID documents (eyes, nose, mouth, cheekbones)\n•  Client's signature is consistent with their ID documents\nIf any of the above checks fail, please do not proceed.",
+        "type":"text"
+      }
+    ]
+  },
+  "appPrivacy":{
+    "name":"Privacy",
+    "shortName":"Privacy",
+    "title":"Privacy",
+    "userSelectable":false,
+    "questions":[
+      {
+        "question":"Please read the following to the client \"Your personal details will now be encrypted and secured in accordance with Australian privacy law for secure access by your adviser to complete your property transaction.\"",
+        "type":"text"
+      }
+    ]
+  },
+  "appPexaPrivacy":{
+    "name":"Privacy",
+    "shortName":"Privacy",
+    "title":"Privacy",
+    "userSelectable":false,
+    "questions":[
+      {
+        "question":"Please read the following to the client \"Your personal details will now be encrypted and secured in accordance with Australian privacy law for secure access by PEXA to complete your registration.\"",
+        "type":"text"
+      }
+    ]
+  },
+  "pexaAdditionalInfo":{
+    "name":"Additional info",
+    "shortName":"Info",
+    "title":"Additional info",
+    "userSelectable":false,
+    "questions":[
+      {
+        "question":"Firm name and Date of Birth",
+        "type":"textfield",
+        "textfields":[
+          {
+            "label":"Firm name",
+            "fieldName":"firmName",
+            "type":"text"
+          },
+          {
+            "label":"Date of birth",
+            "fieldName":"dateOfBirth",
+            "type":"date"
+          }
+        ]
+      }
+    ]
+  },
+  "LTF":{
+    "name":"Land Transfer Form",
+    "shortName":"Land Transfer Form",
+    "title":"Land Transfer Form",
+    "userSelectable":true,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Land Transfer Form: Take photo of page showing real property details and signature.",
+        "type":"photo",
+        "required":true
+      },
+      {
+        "question":"Land Transfer Form: Take photo of additional page (if necessary).",
+        "type":"photo"
+      }
+    ]
+  },
+  "OTH":{
+    "name":"Other Document",
+    "shortName":"Other",
+    "title":"Other Document",
+    "userSelectable":true,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Other Document: Take photo of relevant page of document.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "clientSignature":{
+    "documentType":"clientSignature",
+    "title":"Signature",
+    "userSelectable":false,
+    "shortName":"Client signature",
+    "questions":[
+      {
+        "question":"I, {{clientFullName}}, confirm that I have been identified today using original identity documents presented by me.",
+        "type":"signature",
+        "required":true
+      }
+    ]
+  },
+  "agentSignature":{
+    "documentType":"agentSignature",
+    "title":"Verifier's certification",
+    "userSelectable":false,
+    "shortName":"Verifier's certification",
+    "questions":[
+      {
+        "question":"I, {{agentName}}, certify that:\n1. The identification relates to {{clientFullName}}\n2. This identification was carried out by me on {{startDate}}\n3. The original current ID documents listed below were produced to me and imaged by me as true copies\n{{#identificationDocuments}}{{.}}\n{{/identificationDocuments}}4. The person I have identified appears to have similar facial characteristics as the person shown in the photographs in the original ID documents produced to me\n5. This identification was carried out in accordance with the Registrar’s Verification of Identity policy.",
+        "type":"text"
+      },
+      {
+        "question":"Verifier's certification (continued)",
+        "type":"signature",
+        "required":true
+      }
+    ]
+  },
+  "tollAgentSignature":{
+    "documentType":"agentSignature",
+    "title":"Verifier's certification",
+    "userSelectable":false,
+    "shortName":"Verifier's certification",
+    "questions":[
+     {
+       "question":"I, {{agentName}} confirm that the ZipID 5 point check has been complied with:\n\n1.  The customer has provided the documents specified in the booking.\n2.  The ID documents reasonably appear genuine and original (no photocopies)\n3.  The ID documents have not expired\n4.  The name in the ID documents is the same or closely similar as the booking name and is consistent across ID documents (or any name variation is as shown in a Marriage Certificate or Change of Name Certificate)\n5.  The customer appears to be the same person shown in any presented photographic ID documents.\n\n* If the customer presented a Client Authorisation Form it was signed by the customer in front me.",
+       "type":"confirm"
+     }
+    ]
+  },
+  "clientSignaturePEXA":{
+    "name":"Client signature",
+    "title":"Client signature",
+    "userSelectable":false,
+    "shortName":"Client signature",
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Take photo of Signature Card signed by {{clientFullName}}.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "clientPhoto":{
+    "name":"Client photo",
+    "documentType":"client",
+    "shortName":"Client photo",
+    "title":"Photo",
+    "userSelectable":false,
+    "documentType":"clientPhoto",
+    "questions":[
+      {
+        "shortName":"Client",
+        "question":"Take photo of {{clientFirstName}} from the shoulders up (like a passport photo). No glasses or hat.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "CAF":{
+    "name":"Client Authorisation Form",
+    "shortName":"Client Authorisation Form",
+    "title":"Client Authorisation Form",
+    "userSelectable":true,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Client Authorisation: Take photo of page showing real property details and signature.",
+        "type":"photo"
+      }
+    ]
+  },
+  "tollCAF":{
+    "name":"Client Authorisation Form",
+    "shortName":"Client Authorisation Form",
+    "title":"Client Authorisation Form",
+    "userSelectable":false,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Ask {{clientFirstName}} if their conveyancer has requested a \"Client Authorisation Form\" (A4 doc) be presented at this appointment?\n\nIf yes, please ask {{clientFirstName}} to sign the Client Authorisation Form in front of you. Do NOT sign the Form yourself.",
+        "type":"text"
+      },
+      {
+        "question":"Take photo of the signed Client Authorisation Form (if provided).",
+        "type":"photo"
+      }
+    ]
+  },  
+  "MOR":{
+    "name":"Mortgage",
+    "shortName":"Mortgage",
+    "title":"Mortgage",
+    "userSelectable":true,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Mortgage: Take photo of page showing real property details and signature",
+        "type":"photo",
+        "required":true
+      },
+      {
+        "question":"Mortgage: Take photo of additional page (if necessary).",
+        "type":"photo"
+      }
+    ]
+  },
+  "ASA":{
+    "name":"Appointment of Settlement Agent",
+    "shortName":"Appointment of Settlement Agent",
+    "title":"Appointment of Agent",
+    "userSelectable":true,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Appointment of Settlement Agent: Take photo of page showing client details and signature.",
+        "type":"photo",
+        "required":true
+      },
+      {
+        "question":"Appointment of Settlement Agent: Take an additional photo of the form (if necessary).",
+        "type":"photo"
+      }
+    ]
+  },
+  "NAM":{
+    "name":"Change of Name Certificate",
+    "shortName":"Change of Name Certificate",
+    "title":"Name",
+    "userSelectable":true,
+    "documentType":"id",
+    "questions":[
+      {
+        "question":"Take photo of the entire Change of Name Certificate.",
+        "type":"photo",
+        "required":true
+      },
+      {
+        "question":"Take a close-up photo of the Change of Name Certificate.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "MRG":{
+    "name":"Marriage Certificate",
+    "shortName":"Marriage Certificate",
+    "title":"Marriage",
+    "userSelectable":true,
+    "documentType":"id",
+    "questions":[
+      {
+        "question":"Take photo of the entire Marriage Certificate.",
+        "type":"photo",
+        "required":true
+      },
+      {
+        "question":"Take a close-up photo of the part of the Marriage Certificate showing the name of the bride and groom.",
+        "type":"photo",
+        "required":true
+      },
+      {
+      "question":"Additional photo of the Marriage Certificate",
+      "type":"photo"
+      }
+    ]
+  },
+  "APP":{
+    "name":"Australian Passport",
+    "shortName":"Passport",
+    "title":"Passport",
+    "userSelectable":true,
+    "documentType":"id",
+    "questions":[
+      {
+        "question":"Take photo of passport photo page.",
+        "type":"photo",
+        "required":true
+      },
+      {
+        "question":"Take a photo of the signature page of the passport (if it separate to the photo page)",
+        "type":"photo"
+      }
+    ]
+  },
+  "FPV":{
+    "name":"Foreign Passport with Australian Resident Visa",
+    "shortName":"Foreign Passport with Visa",
+    "title":"Passport",
+    "userSelectable":true,
+    "documentType":"id",
+    "questions":[
+      {
+        "question":"Take photo of passport photo page.",
+        "type":"photo",
+        "required":true
+      },
+      {
+        "question":"Take photo of passport visa label, grant notice or evidence of visa. If client does not have evidence of visa, take another photo of passport at this point.",
+        "type":"photo",
+        "required":true
+      },
+      {
+        "question":"Take a photo of the signature page of the passport (if it separate to the photo page)",
+        "type":"photo"
+      },
+      {
+        "question":"Take photo of English translation (if provided).",
+        "type":"photo"
+      }
+    ]
+  },
+  "ADL":{
+    "name":"Australian Drivers Licence",
+    "shortName":"Drivers Licence",
+    "title":"Licence",
+    "userSelectable":true,
+    "documentType":"id",
+    "questions":[
+      {
+        "question":"Take photo of licence (front)",
+        "type":"photo",
+        "required":true
+      },
+      {
+        "question":"Take photo of licence (back)",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "POA":{
+    "name":"Australian Proof of Age Card",
+    "shortName":"Proof of Age Card",
+    "title":"Proof of Age",
+    "userSelectable":true,
+    "documentType":"id",
+    "questions":[
+      {
+        "question":"Take photo of card.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "BTH":{
+    "name":"Birth Certificate",
+    "shortName":"Birth Certificate",
+    "title":"Birth Certificate",
+    "userSelectable":true,
+    "documentType":"id",
+    "questions":[
+      {
+        "question":"Take photo of entire certificate.",
+        "type":"photo",
+        "required":true
+      },
+      {
+        "question":"Take close-up photo of Name and Date of Birth section.",
+        "type":"photo",
+        "required":true
+      },
+      {
+        "question":"Take photo of English translation (if provided).",
+        "type":"photo"
+      }
+    ]
+  },
+  "CTZ":{
+    "name":"Citizenship Certificate",
+    "shortName":"Citizenship Certificate",
+    "title":"Citizenship",
+    "userSelectable":true,
+    "documentType":"id",
+    "questions":[
+      {
+        "question":"Take photo of entire certificate.",
+        "type":"photo",
+        "required":true
+      },
+      {
+        "question":"Take close-up photo of Name and Date of Birth section.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "DSC":{
+    "name":"Descent Certificate",
+    "shortName":"Descent Certificate",
+    "title":"Descent",
+    "userSelectable":true,
+    "documentType":"id",
+    "questions":[
+      {
+        "question":"Take photo of entire certificate.",
+        "type":"photo",
+        "required":true
+      },
+      {
+        "question":"Take close-up photo of Name and  Date of Birth section.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "MED":{
+    "name":"Medicare Card",
+    "shortName":"Medicare Card",
+    "title":"Medicare",
+    "userSelectable":true,
+    "documentType":"id",
+    "questions":[
+      {
+        "question":"Take photo of Medicare card.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "CTL":{
+    "name":"Centrelink Card",
+    "shortName":"Centrelink Card",
+    "title":"Centrelink",
+    "userSelectable":true,
+    "documentType":"id",
+    "questions":[
+      {
+        "question":"Take photo of Centrelink card.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "VAC":{
+    "name":"Department of Veteran Affairs Card",
+    "shortName":"Veteran Affairs Card",
+    "title":"Veteran",
+    "userSelectable":true,
+    "documentType":"id",
+    "questions":[
+      {
+        "question":"Take photo of Veteran Affairs card.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "FPN":{
+    "name":"Foreign Passport (no evidence of visa provided)",
+    "shortName":"Foreign Passport (no evidence of visa provided)",
+    "title":"Passport",
+    "userSelectable":true,
+    "documentType":"id",
+    "questions":[
+      {
+        "question":"Take photo of passport photo page.",
+        "type":"photo",
+        "required":true
+      },
+      {
+        "question":"Take photo of English translation (if provided).",
+        "type":"photo"
+      }
+    ]
+  },
+  "FDL":{
+    "name":"Foreign Drivers Licence (with photo)",
+    "shortName":"Foreign Drivers Licence",
+    "title":"Licence",
+    "userSelectable":true,
+    "documentType":"id",
+    "questions":[
+      {
+        "question":"Take photo of licence (front)",
+        "type":"photo",
+        "required":true
+      },
+      {
+      "question":"Take photo of licence (back)",
+      "type":"photo",
+      "required":true
+      },
+      {
+        "question":"Take photo of English translation (if provided).",
+        "type":"photo"
+      }
+    ]
+  },
+  "RAN":{
+    "name":"Rates Notice",
+    "shortName":"Rates Notice",
+    "title":"Rates Notice",
+    "userSelectable":true,
+    "documentType":"id",
+    "questions":[
+      {
+        "question":"Take photo of the Rates Notice.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "UTL":{
+    "name":"Utility Bill",
+    "shortName":"Utility Bill",
+    "title":"Utility Bill",
+    "userSelectable":true,
+    "documentType":"id",
+    "questions":[
+      {
+        "question":"Take photo of the entire front page of the utility bill.",
+        "type":"photo",
+        "required":true
+      },
+      {
+        "question":"Take a close up photo of the name and address on the utility bill.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+
+
+  "verifycv-bankruptcy-check": {
+    "name":"Bankruptcy Check",
+    "shortName":"Bankruptcy Check",
+    "title":"Bankruptcy Check",
+    "userSelectable":false,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Take photo of the \"Bankruptcy Check\" consent form.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "verifycv-aml-check": {
+    "name":"AML/CTF Check",
+    "shortName":"AML/CTF Check",
+    "title":"AML/CTF Check",
+    "userSelectable":false,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Take photo of the \"AML/CTF Check\" consent form.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "verifycv-afp-check": {
+    "name":"National Police Check (AFP)",
+    "shortName":"National Police Check (AFP)",
+    "title":"National Police Check (AFP)",
+    "userSelectable":false,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Take photo of the \"National Police Check (AFP)\" consent form.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "verifycv-public-record-check": {
+    "name":"Public Record Check",
+    "shortName":"Public Record Check",
+    "title":"Public Record Check",
+    "userSelectable":false,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Take photo of the \"Public Record Check\" consent form.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "verifycv-employment-history-check": {
+    "name":"Employment History Check",
+    "shortName":"Employment History Check",
+    "title":"Employment History Check",
+    "userSelectable":false,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Take photo of the \"Employment History Check\" consent form.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "verifycv-employment-history-check-5-years": {
+    "name":"Employment History Check",
+    "shortName":"Employment History Check",
+    "title":"Employment History Check",
+    "userSelectable":false,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Take photo of the \"Employment History Check\" consent form.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "verifycv-academic-qualification-check": {
+    "name":"Academic Qualification Check",
+    "shortName":"Academic Qualification Check",
+    "title":"Academic Qualification Check",
+    "userSelectable":false,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Take photo of the \"Academic Qualification Check\" consent form.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "verifycv-entitlement-to-work-check": {
+    "name":"Entitlement to Work Check",
+    "shortName":"Entitlement to Work Check",
+    "title":"Entitlement to Work Check",
+    "userSelectable":false,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Take photo of the \"Entitlement to Work Check\" consent form.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "verifycv-conflict-of-interest-check": {
+    "name":"Conflict of Interest Check",
+    "shortName":"Conflict of Interest Check",
+    "title":"Conflict of Interest Check",
+    "userSelectable":false,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Take photo of the \"Conflict of Interest Check\" consent form.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "verifycv-apra-disqualified-register-check": {
+    "name":"APRA Disqualified Register Check",
+    "shortName":"APRA Disqualified Register Check",
+    "title":"APRA Disqualified Register Check",
+    "userSelectable":false,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Take photo of the \"APRA Disqualified Register Check\" consent form.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "verifycv-asic-banned-and-disqualified-check": {
+    "name":"ASIC Banned & Disqualified Check",
+    "shortName":"ASIC Banned & Disqualified Check",
+    "title":"ASIC Banned & Disqualified Check",
+    "userSelectable":false,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Take photo of the \"ASIC Banned & Disqualified Check\" consent form.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "verifycv-directorships-check": {
+    "name":"Directorships Check",
+    "shortName":"Directorships Check",
+    "title":"Directorships Check",
+    "userSelectable":false,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Take photo of the \"Directorships Check\" consent form.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  },
+  "verifycv-global-media-check": {
+    "name":"Global Media Check",
+    "shortName":"Global Media Check",
+    "title":"Global Media Check",
+    "userSelectable":false,
+    "documentType":"additional",
+    "questions":[
+      {
+        "question":"Take photo of the \"Global Media Check\" consent form.",
+        "type":"photo",
+        "required":true
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "success": true,
+    "authToken": "validauthtoken",
+    "permissions": {
+        "adhoc": true,
+        "fetchJobs": true,
+        "verificationTypes": ["PEXA", "NSW", "QLD", "SA", "WA", "VIC"]
+    },
+    "linkedAccounts": {
+        "brokerFor": [{
+            "id": 100300,
+            "name": "Demo",
+            "verificationTypes": ["PEXA", "NSW", "QLD", "SA", "WA", "VIC"]
+        }],
+        "owners": [{
+            "id": 100300,
+            "name": "Demo",
+            "verificationTypes": ["PEXA", "NSW", "QLD", "SA", "WA", "VIC"]
+        }]
+    }
+}

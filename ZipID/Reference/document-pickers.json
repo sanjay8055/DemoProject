@@ -1,0 +1,249 @@
+{
+  "voi-wizard": {
+    "format": "wizard",
+    "config": {
+      "start": "start",
+      "steps": {
+        "start": {
+          "stepId": "start",
+          "template": "intro",
+          "body": "blah",
+          "next": "start2"
+        },
+        "start2": {
+          "stepId": "start2",
+          "template": "multichoice",
+          "title": "Common combinations",
+          "options": [
+            {
+              "optionId": 0,
+              "name": "Australian Passport and Australian Drivers Licence",
+              "docs": ["APP", "ADL"],
+              "next": "nameChange"
+            },
+            {
+              "optionId": 1,
+              "name": "Australian Passport, Full Birth Certificate and Medicare Card",
+              "docs": ["APP", "BTH", "MED"],
+              "next": "nameChange"
+            },
+            {
+              "optionId": 2,
+              "name": "Australian Drivers Licence, Full Birth Certificate and Medicare Card",
+              "docs": ["ADL", "BTH", "MED"],
+              "next": "nameChange"
+            },
+            {
+              "optionId": 3,
+              "name": "Other combinations",
+              "next": "passport"
+            }
+          ]    
+        },
+        "passport": {
+          "stepId": "passport",
+          "template": "multichoice",
+          "title": "Can you present a Passport?",
+          "options": [
+            {
+              "optionId": 0,
+              "name": "Australian Passport (current or less than 2 years expired)",
+              "docs": ["APP"],
+              "next": "licence"
+            },
+            {
+              "optionId": 1,
+              "name": "Foreign Passport",
+              "docs": ["FPN"],
+              "next": "licence"
+            },
+            {
+              "optionId": 2,
+              "name": "No, I don't have a passport",
+              "next": "licence2"
+            }
+          ]
+        },
+        "licence": {
+          "stepId": "licence",
+          "template": "multichoice",
+          "title": "Can you present one of the following documents?",
+          "options": [
+            {
+              "optionId": 0,
+              "name": "Australian Driver's Licence",
+              "docs": ["ADL"],
+              "next": "nameChange"
+            },
+            {
+              "optionId": 1,
+              "name": "Australian Proof of Age Card",
+              "docs": ["POA"],
+              "next": "nameChange"
+            },
+            {
+              "optionId": 2,
+              "name": "No, I don't have either of these documents",
+              "next": "birthCertificate"
+            }      
+          ]
+        },
+        "licence2": {
+          "stepId": "licence2",
+          "template": "multichoice",
+          "title": "Can you present one of the following documents?",
+          "options": [
+            {
+              "optionId": 0,
+              "name": "Australian Driver's Licence",
+              "docs": ["ADL"],
+              "next": "birthCertificate"
+            },
+            {
+              "optionId": 1,
+              "name": "Australian Proof of Age Card",
+              "docs": ["POA"],
+              "next": "birthCertificate"
+            },
+            {
+              "optionId": 2,
+              "name": "No, I don't have either of these documents",
+              "next": "fail"
+            }      
+          ]
+        },
+        "birthCertificate": {
+          "stepId": "birthCertificate",
+          "template": "multichoice",
+          "title": "Can you present one of the following documents?",
+          "options": [
+            {
+              "optionId": 0,
+              "name": "Birth Certificate",
+              "docs": ["BTH"],
+              "next": "medicare"
+            },
+            {
+              "optionId": 1,
+              "name": "Citizenship Certificate",
+              "docs": ["CTZ"],
+              "next": "medicare"
+            },
+            {
+              "optionId": 2,
+              "name": "Descent Certificate",
+              "docs": ["DSC"],
+              "next": "medicare"
+            },
+            {
+              "optionId": 3,
+              "name": "No, I don't have any of these documents",
+              "next": "fail"
+            }
+          ]
+        },
+        "medicare": {
+          "stepId": "medicare",
+          "template": "multichoice",
+          "title": "Can you present one of the following documents?",
+          "options": [
+            {
+              "optionId": 0,
+              "name": "Medicare Card",
+              "docs": ["MED"],
+              "next": "nameChange"
+            },
+            {
+              "optionId": 1,
+              "name": "Centrelink Card",
+              "docs": ["CTL"],
+              "next": "nameChange"
+            },
+            {
+              "optionId": 2,
+              "name": "Department of Veteran Affairs Card",
+              "docs": ["VAC"],
+              "next": "nameChange"
+            },
+            {
+              "optionId": 3,
+              "name": "No, I don't have any of these documents",
+              "next": "fail"
+            }      
+          ]
+        },
+        "nameChange": {
+          "stepId": "nameChange",
+          "template": "multichoice",
+          "title": "Has your name changed at any point? (eg. through marriage)",
+          "options": [
+            {
+              "optionId": 0,
+              "name": "Yes, my name has changed",
+              "next": "nameChange2"
+            },
+            {
+              "optionId": 1,
+              "name": "No, my name has always been the same",
+              "next": "success"
+            }
+          ]
+        },
+        "nameChange2": {
+          "stepId": "nameChange2",
+          "template": "multichoice",
+          "title": "Is your name displayed on each document as: {{personName}}?",
+          "options": [
+            {
+              "optionId": 0,
+              "name": "Yes, my first and last name is the same on each document",
+              "next": "success"
+            },
+            {
+              "optionId": 1,
+              "name": "No, they are different",
+              "next": "marriage"
+            }
+          ]
+        },        
+        "marriage": {
+          "stepId": "marriage",
+          "template": "multichoice",
+          "title": "Can you present one of the following documents?",
+          "helptext": "Certificates given by marriage celebrants are not acceptable.",
+          "options": [
+            {
+              "optionId": 0,
+              "name": "Marriage Certificate (government-issued)",
+              "docs": ["MRG"],
+              "next": "success"
+            },    
+            {
+              "optionId": 1,
+              "name": "Change of Name Certificate (government-issued)",
+              "docs": ["NAM"],
+              "next": "success"
+            },
+            {
+              "optionId": 2,
+              "name": "No, I don't have either of these documents",
+              "next": "fail"
+            }
+          ]
+        },
+        "fail": {
+          "stepId": "fail",
+          "template": "fail",
+          "body": "done, failed!",
+          "success": false
+        },
+        "success": {
+          "stepId": "success",
+          "template": "success",
+          "body": "done!",
+          "success": true
+        }
+      }
+    }
+  }
+}

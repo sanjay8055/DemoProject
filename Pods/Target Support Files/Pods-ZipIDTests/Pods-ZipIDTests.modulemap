@@ -1,0 +1,6 @@
+framework module Pods_ZipIDTests {
+  umbrella header "Pods-ZipIDTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

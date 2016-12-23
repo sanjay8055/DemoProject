@@ -1,0 +1,6 @@
+framework module Pods_ZipID_Enterprise {
+  umbrella header "Pods-ZipID Enterprise-umbrella.h"
+
+  export *
+  module * { export * }
+}
